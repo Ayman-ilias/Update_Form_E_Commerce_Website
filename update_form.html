@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50">
+    <div class="flex justify-center items-center min-h-screen pt-4 gradient-bg">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-lg">
+            <div class="mb-6 text-center">
+                <div class="flex justify-center items-center mb-4">
+                    <img src="./clickcart_logo.png" alt="ClickCart Logo" class="w-16 h-16 rotating-logo">
+                    <h1 class="text-4xl font-extrabold text-red-500 ml-4">ClickCart</h1>
+                </div>
+                <h2 class="text-2xl text-gray-800 font-semibold mt-2">Update Profile</h2>
+            </div>
+            <form>
+                <div class="grid grid-cols-1 gap-6">
+                    <div>
+                        <label class="block text-gray-700 mb-1 font-medium" for="username">Username</label>
+                        <input class="form-input w-full px-4 py-2 border rounded-xl shadow-sm focus:outline-none focus:ring-2" type="text" id="username" placeholder="Username" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1 font-medium" for="firstname">First Name</label>
+                        <input class="form-input w-full px-4 py-2 border rounded-xl shadow-sm focus:outline-none focus:ring-2" type="text" id="firstname" placeholder="First Name" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1 font-medium" for="lastname">Last Name</label>
+                        <input class="form-input w-full px-4 py-2 border rounded-xl shadow-sm focus:outline-none focus:ring-2" type="text" id="lastname" placeholder="Last Name" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1 font-medium" for="email">Email</label>
+                        <input class="form-input w-full px-4 py-2 border rounded-xl shadow-sm focus:outline-none focus:ring-2" type="email" id="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary w-full mt-6">Apply Changes</button>
+                <p class="text-center mt-4">
+                    <button type="button" onclick="togglePopup()" class="text-red-500 hover:underline">Change Password</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup Form -->
+    <div class="popup-form" id="popupForm">
+        <div class="popup-content bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md">
+            <div class="mb-4 text-center">
+                <h2 class="text-2xl text-gray-800 font-semibold">Change Password</h2>
+            </div>
+            <form>
+                <div>
+                    <label class="block text-gray-700 mb-1 font-medium" for="current_password">Current Password</label>
+                    <input class="form-input w-full px-4 py-2 border rounded-xl shadow-sm focus:outline-none focus:ring-2" type="password" id="current_password" placeholder="Current Password" required>
+                </div>
+                <div class="mt-4">
+                    <label class="block text-gray-700 mb-1 font-medium" for="new_password">New Password</label>
+                    <input class="form-input w-full px-4 py-2 border rounded-xl shadow-sm focus:outline-none focus:ring-2" type="password" id="new_password" placeholder="New Password" required>
+                </div>
+                <div class="mt-4">
+                    <label class="block text-gray-700 mb-1 font-medium" for="confirm_password">Confirm Password</label>
+                    <input class="form-input w-full px-4 py-2 border rounded-xl shadow-sm focus:outline-none focus:ring-2" type="password" id="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn-primary w-full mt-6">Save Changes</button>
+                <button type="button" onclick="togglePopup()" class="btn-secondary w-full mt-2">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+  <script src="app.js"></script>  
+</body>
+
+</html>
